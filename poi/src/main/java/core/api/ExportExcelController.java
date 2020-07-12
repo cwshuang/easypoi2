@@ -18,7 +18,7 @@ public class ExportExcelController {
 	@RequestMapping("/exportExcel")
 	public void exportExcel (HttpServletResponse response) throws Exception {
 		List<Map<String, Object>> list = new ArrayList<Map<String,Object>>();
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 100000; i++) {
 		    Map<String, Object> map = new HashedMap<String, Object>();
 			map.put("NAME", "张三四大佛山的哈佛山大佛"+i);
 			map.put("AGE", 26+i);
