@@ -1,15 +1,12 @@
 package core.api;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.collections4.map.HashedMap;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +15,7 @@ import core.util.EasyPOIUtil;
 @RequestMapping("/ExportExcelController")
 public class ExportExcelController {
 	
-	@GetMapping("/exportExcel")
+	@RequestMapping("/exportExcel")
 	public void exportExcel (HttpServletResponse response) throws Exception {
 		List<Map<String, Object>> list = new ArrayList<Map<String,Object>>();
 		for (int i = 0; i < 10; i++) {

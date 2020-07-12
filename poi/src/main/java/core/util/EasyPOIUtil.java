@@ -27,10 +27,10 @@ public class EasyPOIUtil {
     public static void exportExcel(HttpServletResponse response,List<Map<String, Object>> list, String[] eName, String[] cName, String fileName) throws Exception {
  
         ServletOutputStream out = null;
-        ExcelWriter writer = new ExcelWriter(out, ExcelTypeEnum.XLSX);
+        ExcelWriter writer = null;
         try {
             out = response.getOutputStream();
-          
+            writer = new ExcelWriter(out, ExcelTypeEnum.XLSX);
  
             // 设置EXCEL名称
            // String fileName = new String(("SystemExcel").getBytes(), "UTF-8");
